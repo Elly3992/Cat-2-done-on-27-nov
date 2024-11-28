@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <tittle><b>Registration Account</b></tittle>
+    
+    <style>
+        Body {
+            Font-family: Arial, sans-serif;
+        }
+
+        Form {
+            Width: 400px;
+            Margin: 20px auto;
+        }
+
+        .form-group {
+            Margin-bottom: 10px;
+        }
+
+        .form-group label {
+            Display: block;
+            Margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            Width: 100%;
+            Padding: 5px;
+        }
+
+        .error, .format {
+            Display: none;
+            Color: red;
+            Font-size: 12px;
+        }
+
+        .form-group:hover .error,
+        .form-group:hover .format {
+            Display: block;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class=”form-group”>
+            <label for=”fullName”>Full Name:</label>
+            <input type=”text” id=”fullName” name=”fullName” required>
+            <span class=”error”>User name must be at least 4 characters</span>
+        </div>
+
+        <div class=”form-group”>
+            <label for=”password”>Password:</label>
+            <input type=”password” id=”password” name=”password” required>
+            <span class=”error”>Password must be at least 4 characters</span>
+        </div>
+
+        <div class=”form-group”>
+            <label for=”confirmPassword”>Confirm Password:</label>
+            <input type=”password” id=”confirmPassword” name=”confirmPassword” required>
+            <span class=”error”>Passwords do not match</span>
+        </div>
+
+        <div class=”form-group”>
+            <label for=”email”>Email:</label>
+            <input type=”email” id=”email” name=”email” required>
+            <span class=”error”>Invalid email format</span>
+            <span class=”format”>Format: john@gmail.com</span>
+        </div>
+
+        <div class=”form-group”>
+            <label for=”phone”>Phone Number:</label>
+            <input type=”tel” id=”phone” name=”phone” required>
+            <span class=”error”>Invalid phone number</span>
+            <span class=”format”>Format: 0XXX-XXX-XXX</span>
+        </div>
+
+        <div class=”form-group”>
+            <label for=”zipCode”>Zip Code:</label>
+            <input type=”text” id=”zipCode” name=”zipCode” required>
+            <span class=”error”>Invalid Zip Code</span>
+            <span class=”format”>Format: Use 5 or 9 digits Zip Code</span>
+        </div>
+
+        <div class=”form-group”>
+            <label for=”cardType”>Card Type:</label>
+            <select id=”cardType” name=”cardType” required>
+                <option value=”visa”>Visa</option>
+                <option value=”mastercard”>Mastercard</option>
+            </select>
+        </div>
+
+        <div class=”form-group”>
+            <label for=”cardNumber”>Card Number:</label>
+            <input type=”text” id=”cardNumber” name=”cardNumber” required>
+            <span class=”error”>Invalid card number format</span>
+            <span class=”format”>Format: 1111-2222-3333-4444</span>
+        </div>
+
+        <div class=”form-group”>
+            <label for=”expirationDate”>Expiration Date:</label>
+            <input type=”date” id=”expirationDate” name=”expirationDate” required>
+            <span class=”error”>Invalid date format</span>
+            <span class=”format”>Format: YYYY-MM-DD</span>
+        </div>
+
+        <button type=”submit”>Register</button>
+        <button type=”reset”>Clear Form</button>
+    </form>
+</body>
+</html>
